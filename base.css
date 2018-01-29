@@ -1,0 +1,230 @@
+#chromePluginHuoBiAssistant {
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+    font-size: 17px;
+}
+
+#chromePluginHuoBiAssistant .dialog {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    padding-top: 10px;
+}
+
+#chromePluginHuoBiAssistant .dialog .dialog-content {
+    width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+    padding-top: 5px;
+}
+
+#chromePluginHuoBiAssistant .result-detail {
+    min-width: 200px;
+    position: fixed;
+    background: rgba(255, 255, 255, .5);
+    border: 1px solid #d4d2d2;
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px #d4d2d2;
+    bottom: 10px;
+    right: 10px;
+}
+
+#chromePluginHuoBiAssistant .result-detail-show {
+    opacity: 1 !important;
+    background: #fff;
+}
+
+#chromePluginHuoBiAssistant #chromePluginSetting {
+    cursor: pointer;
+    width: 20px;
+    float: right;
+}
+
+#chromePluginHuoBiAssistant #chromePluginSetting:after {
+    display: block;
+    content: '';
+    height: 20px;
+    width: 1px;
+    background: #000;
+    margin-left: -10px;
+    transform: rotate(45deg);
+}
+
+.result-detail-show #chromePluginSetting:after {
+    display: none;
+}
+
+#chromePluginHuoBiAssistant #resultData {
+    width: 100%;
+}
+
+#chromePluginHuoBiAssistant #watchDataDetail {
+    padding: 0 10px;
+}
+
+#chromePluginHuoBiAssistant #showOnAll {
+    width: 20px;
+    transform: rotate(45deg);
+}
+
+#chromePluginHuoBiAssistant .chromePluginClear {
+    position: absolute;
+    float: right;
+    display: none;
+}
+
+#chromePluginHuoBiAssistant .result-detail {
+    opacity: 0.1;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#chromePluginHuoBiAssistant .result-detail:hover {
+    opacity: 1;
+    background: #fff;
+}
+
+#chromePluginHuoBiAssistant .close {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #d4d2d2;
+    z-index: 99999;
+}
+
+#chromePluginHuoBiAssistant .search-region {
+    position: relative;
+}
+
+#chromePluginHuoBiAssistant .search-region input, #chromePluginHuoBiAssistant .search-region select {
+    width: 200px;
+    margin-left: 3px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #e6e1e1;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+#chromePluginHuoBiAssistant .warning-region {
+    list-style: none;
+}
+
+#chromePluginHuoBiAssistant .warning-region {
+    position: fixed;
+    top: 10px;
+    right: 100px;
+}
+
+#chromePluginHuoBiAssistant .warning {
+    position: relative;
+}
+
+#chromePluginHuoBiAssistant .warning.down:before, #chromePluginHuoBiAssistant .warning.down:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 14px solid greenyellow;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    margin-left: -15px;
+    top: 6px;
+    animation: down 2s infinite;
+    -webkit-animation: down 2s infinite;
+}
+
+#chromePluginHuoBiAssistant .warning.up:before, #chromePluginHuoBiAssistant .warning.up:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 8px solid transparent;
+    border-bottom: 14px solid #fff;
+    border-left: 8px solid transparent;
+    margin-left: -15px;
+    top: 6px;
+    animation: up 2s infinite;
+    -webkit-animation: up 2s infinite;
+}
+
+#chromePluginHuoBiAssistant .warning:after {
+    right: -15px;
+}
+
+#chromePluginHuoBiAssistant .search-button {
+    position: absolute;
+    top: 0;
+    margin-left: 120px;
+}
+
+#chromePluginHuoBiAssistant .none {
+    display: none;
+}
+
+#chromePluginHuoBiAssistant #setSearchData {
+    width: 100%;
+}
+
+@keyframes down {
+    0% {
+        border-top: 14px solid #fff;
+    }
+    50% {
+        border-top: 14px solid greenyellow;
+    }
+
+    100% {
+        border-top: 14px solid #fff;
+    }
+}
+
+@-webkit-keyframes down {
+    0% {
+        border-top: 14px solid #fff;
+    }
+    50% {
+        border-top: 14px solid greenyellow;
+    }
+
+    100% {
+        border-top: 14px solid #fff;
+    }
+}
+
+@keyframes up {
+    0% {
+        border-bottom: 14px solid #fff;
+    }
+    50% {
+        border-bottom: 14px solid red;
+    }
+
+    100% {
+        border-bottom: 14px solid #fff;
+    }
+}
+
+@-webkit-keyframes up {
+    0% {
+        border-bottom: 14px solid #fff;
+    }
+    50% {
+        border-bottom: 14px solid red;
+    }
+
+    100% {
+        border-bottom: 14px solid #fff;
+    }
+}
+
