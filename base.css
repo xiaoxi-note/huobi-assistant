@@ -1,8 +1,60 @@
+#chromePluginHuoBiAssistant body,
+#chromePluginHuoBiAssistant ol,
+#chromePluginHuoBiAssistant th,
+#chromePluginHuoBiAssistant td,
+#chromePluginHuoBiAssistant dl,
+#chromePluginHuoBiAssistant dd,
+#chromePluginHuoBiAssistant input,
+#chromePluginHuoBiAssistant textarea,
+#chromePluginHuoBiAssistant select {
+    margin: 0;
+    padding: 0
+}
+
+#chromePluginHuoBiAssistant body {
+    font: 12px "PingFangSC-Regular, sans-serif", "Arial Narrow", HELVETICA;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+}
+
+#chromePluginHuoBiAssistant a {
+    color: #2d374b;
+    text-decoration: none
+}
+
+#chromePluginHuoBiAssistant a:hover {
+    color: #cd0200;
+    text-decoration: underline
+}
+
+#chromePluginHuoBiAssistant em {
+    font-style: normal
+}
+
+#chromePluginHuoBiAssistant li {
+    list-style: none
+}
+
+#chromePluginHuoBiAssistant img {
+    border: 0;
+    vertical-align: middle
+}
+
+#chromePluginHuoBiAssistant table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+#chromePluginHuoBiAssistant p {
+    word-wrap: break-word
+}
+
 #chromePluginHuoBiAssistant {
     position: fixed;
     top: 0;
     z-index: 9999999;
     font-size: 17px;
+
 }
 
 #chromePluginHuoBiAssistant .dialog {
@@ -174,6 +226,10 @@
 
 #chromePluginHuoBiAssistant #setSearchData {
     width: 100%;
+}
+
+#chromePluginHuoBiAssistant #resultData td:nth-child(3), #chromePluginHuoBiAssistant #resultData td:nth-child(5) {
+    color: red
 }
 
 @keyframes down {
