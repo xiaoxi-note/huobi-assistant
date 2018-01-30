@@ -53,9 +53,123 @@ var init = function () {
   bodyObj.appendChild(divObj);
 }
 
-var usdtCoinArray = [{"icon":"btc","base":"usdt"},{"icon":"bch","base":"usdt"},{"icon":"xrp","base":"usdt"},{"icon":"eth","base":"usdt"},{"icon":"ltc","base":"usdt"},{"icon":"dash","base":"usdt"},{"icon":"eos","base":"usdt"},{"icon":"etc","base":"usdt"},{"icon":"omg","base":"usdt"},{"icon":"zec","base":"usdt"},{"icon":"elf","base":"usdt"},{"icon":"smt","base":"usdt"},{"icon":"iost","base":"usdt"},{"icon":"ven","base":"usdt"},{"icon":"qtum","base":"usdt"},{"icon":"neo","base":"usdt"},{"icon":"hsr","base":"usdt"},{"icon":"cvc","base":"usdt"},{"icon":"storj","base":"usdt"},{"icon":"gnt","base":"usdt"},{"icon":"snt","base":"usdt"}]
-var btcCoinArray = [{"icon":"bch","base":"btc"},{"icon":"xrp","base":"btc"},{"icon":"eth","base":"btc"},{"icon":"ltc","base":"btc"},{"icon":"dash","base":"btc"},{"icon":"eos","base":"btc"},{"icon":"etc","base":"btc"},{"icon":"omg","base":"btc"},{"icon":"zec","base":"btc"},{"icon":"mee","base":"btc"},{"icon":"eko","base":"btc"},{"icon":"link","base":"btc"},{"icon":"qtum","base":"btc"},{"icon":"elf","base":"btc"},{"icon":"ven","base":"btc"},{"icon":"adx","base":"btc"},{"icon":"evx","base":"btc"},{"icon":"utk","base":"btc"},{"icon":"dta","base":"btc"},{"icon":"let","base":"btc"},{"icon":"theta","base":"btc"},{"icon":"xem","base":"btc"},{"icon":"appc","base":"btc"},{"icon":"iost","base":"btc"},{"icon":"yee","base":"btc"},{"icon":"chat","base":"btc"},{"icon":"dat","base":"btc"},{"icon":"ost","base":"btc"},{"icon":"qun","base":"btc"},{"icon":"aidoc","base":"btc"},{"icon":"topc","base":"btc"},{"icon":"act","base":"btc"},{"icon":"dbc","base":"btc"},{"icon":"rpx","base":"btc"},{"icon":"swftc","base":"btc"},{"icon":"powr","base":"btc"},{"icon":"req","base":"btc"},{"icon":"hsr","base":"btc"},{"icon":"smt","base":"btc"},{"icon":"wax","base":"btc"},{"icon":"itc","base":"btc"},{"icon":"icx","base":"btc"},{"icon":"cvc","base":"btc"},{"icon":"rcn","base":"btc"},{"icon":"snt","base":"btc"},{"icon":"nas","base":"btc"},{"icon":"salt","base":"btc"},{"icon":"cmt","base":"btc"},{"icon":"gas","base":"btc"},{"icon":"knc","base":"btc"},{"icon":"storj","base":"btc"},{"icon":"neo","base":"btc"},{"icon":"bat","base":"btc"},{"icon":"qsp","base":"btc"},{"icon":"rdn","base":"btc"},{"icon":"btm","base":"btc"},{"icon":"mco","base":"btc"},{"icon":"tnt","base":"btc"},{"icon":"tnb","base":"btc"},{"icon":"mana","base":"btc"},{"icon":"pay","base":"btc"},{"icon":"zrx","base":"btc"},{"icon":"mtl","base":"btc"},{"icon":"qash","base":"btc"},{"icon":"gnt","base":"btc"},{"icon":"ast","base":"btc"},{"icon":"dgd","base":"btc"},{"icon":"wicc","base":"btc"},{"icon":"gnx","base":"btc"},{"icon":"mds","base":"btc"},{"icon":"propy","base":"btc"},{"icon":"sbtc","base":"btc"},{"icon":"btg","base":"btc"},{"icon":"bcd","base":"btc"},{"icon":"bifi","base":"btc"},{"icon":"bcx","base":"btc"}]
-var ethCoinArray = [{"icon":"eos","base":"eth"},{"icon":"omg","base":"eth"},{"icon":"mee","base":"eth"},{"icon":"eko","base":"eth"},{"icon":"link","base":"eth"},{"icon":"iost","base":"eth"},{"icon":"elf","base":"eth"},{"icon":"dta","base":"eth"},{"icon":"adx","base":"eth"},{"icon":"evx","base":"eth"},{"icon":"utk","base":"eth"},{"icon":"let","base":"eth"},{"icon":"theta","base":"eth"},{"icon":"appc","base":"eth"},{"icon":"yee","base":"eth"},{"icon":"chat","base":"eth"},{"icon":"dat","base":"eth"},{"icon":"dbc","base":"eth"},{"icon":"ost","base":"eth"},{"icon":"qun","base":"eth"},{"icon":"aidoc","base":"eth"},{"icon":"topc","base":"eth"},{"icon":"act","base":"eth"},{"icon":"swftc","base":"eth"},{"icon":"powr","base":"eth"},{"icon":"req","base":"eth"},{"icon":"qtum","base":"eth"},{"icon":"wicc","base":"eth"},{"icon":"propy","base":"eth"},{"icon":"gnx","base":"eth"},{"icon":"mds","base":"eth"},{"icon":"hsr","base":"eth"},{"icon":"smt","base":"eth"},{"icon":"ven","base":"eth"},{"icon":"wax","base":"eth"},{"icon":"itc","base":"eth"},{"icon":"icx","base":"eth"},{"icon":"cvc","base":"eth"},{"icon":"rcn","base":"eth"},{"icon":"nas","base":"eth"},{"icon":"salt","base":"eth"},{"icon":"cmt","base":"eth"},{"icon":"gas","base":"eth"},{"icon":"bat","base":"eth"},{"icon":"rdn","base":"eth"},{"icon":"qsp","base":"eth"},{"icon":"btm","base":"eth"},{"icon":"mco","base":"eth"},{"icon":"tnt","base":"eth"},{"icon":"tnb","base":"eth"},{"icon":"mana","base":"eth"},{"icon":"pay","base":"eth"},{"icon":"qash","base":"eth"},{"icon":"gnt","base":"eth"},{"icon":"dgd","base":"eth"}]
+var usdtCoinArray = [{"icon": "btc", "base": "usdt"}, {"icon": "bch", "base": "usdt"}, {
+  "icon": "xrp",
+  "base": "usdt"
+}, {"icon": "eth", "base": "usdt"}, {"icon": "ltc", "base": "usdt"}, {"icon": "dash", "base": "usdt"}, {
+  "icon": "eos",
+  "base": "usdt"
+}, {"icon": "etc", "base": "usdt"}, {"icon": "omg", "base": "usdt"}, {"icon": "zec", "base": "usdt"}, {
+  "icon": "elf",
+  "base": "usdt"
+}, {"icon": "smt", "base": "usdt"}, {"icon": "iost", "base": "usdt"}, {"icon": "ven", "base": "usdt"}, {
+  "icon": "qtum",
+  "base": "usdt"
+}, {"icon": "neo", "base": "usdt"}, {"icon": "hsr", "base": "usdt"}, {"icon": "cvc", "base": "usdt"}, {
+  "icon": "storj",
+  "base": "usdt"
+}, {"icon": "gnt", "base": "usdt"}, {"icon": "snt", "base": "usdt"}]
+var btcCoinArray = [{"icon": "bch", "base": "btc"}, {"icon": "xrp", "base": "btc"}, {
+  "icon": "eth",
+  "base": "btc"
+}, {"icon": "ltc", "base": "btc"}, {"icon": "dash", "base": "btc"}, {"icon": "eos", "base": "btc"}, {
+  "icon": "etc",
+  "base": "btc"
+}, {"icon": "omg", "base": "btc"}, {"icon": "zec", "base": "btc"}, {"icon": "mee", "base": "btc"}, {
+  "icon": "eko",
+  "base": "btc"
+}, {"icon": "link", "base": "btc"}, {"icon": "qtum", "base": "btc"}, {"icon": "elf", "base": "btc"}, {
+  "icon": "ven",
+  "base": "btc"
+}, {"icon": "adx", "base": "btc"}, {"icon": "evx", "base": "btc"}, {"icon": "utk", "base": "btc"}, {
+  "icon": "dta",
+  "base": "btc"
+}, {"icon": "let", "base": "btc"}, {"icon": "theta", "base": "btc"}, {"icon": "xem", "base": "btc"}, {
+  "icon": "appc",
+  "base": "btc"
+}, {"icon": "iost", "base": "btc"}, {"icon": "yee", "base": "btc"}, {"icon": "chat", "base": "btc"}, {
+  "icon": "dat",
+  "base": "btc"
+}, {"icon": "ost", "base": "btc"}, {"icon": "qun", "base": "btc"}, {"icon": "aidoc", "base": "btc"}, {
+  "icon": "topc",
+  "base": "btc"
+}, {"icon": "act", "base": "btc"}, {"icon": "dbc", "base": "btc"}, {"icon": "rpx", "base": "btc"}, {
+  "icon": "swftc",
+  "base": "btc"
+}, {"icon": "powr", "base": "btc"}, {"icon": "req", "base": "btc"}, {"icon": "hsr", "base": "btc"}, {
+  "icon": "smt",
+  "base": "btc"
+}, {"icon": "wax", "base": "btc"}, {"icon": "itc", "base": "btc"}, {"icon": "icx", "base": "btc"}, {
+  "icon": "cvc",
+  "base": "btc"
+}, {"icon": "rcn", "base": "btc"}, {"icon": "snt", "base": "btc"}, {"icon": "nas", "base": "btc"}, {
+  "icon": "salt",
+  "base": "btc"
+}, {"icon": "cmt", "base": "btc"}, {"icon": "gas", "base": "btc"}, {"icon": "knc", "base": "btc"}, {
+  "icon": "storj",
+  "base": "btc"
+}, {"icon": "neo", "base": "btc"}, {"icon": "bat", "base": "btc"}, {"icon": "qsp", "base": "btc"}, {
+  "icon": "rdn",
+  "base": "btc"
+}, {"icon": "btm", "base": "btc"}, {"icon": "mco", "base": "btc"}, {"icon": "tnt", "base": "btc"}, {
+  "icon": "tnb",
+  "base": "btc"
+}, {"icon": "mana", "base": "btc"}, {"icon": "pay", "base": "btc"}, {"icon": "zrx", "base": "btc"}, {
+  "icon": "mtl",
+  "base": "btc"
+}, {"icon": "qash", "base": "btc"}, {"icon": "gnt", "base": "btc"}, {"icon": "ast", "base": "btc"}, {
+  "icon": "dgd",
+  "base": "btc"
+}, {"icon": "wicc", "base": "btc"}, {"icon": "gnx", "base": "btc"}, {"icon": "mds", "base": "btc"}, {
+  "icon": "propy",
+  "base": "btc"
+}, {"icon": "sbtc", "base": "btc"}, {"icon": "btg", "base": "btc"}, {"icon": "bcd", "base": "btc"}, {
+  "icon": "bifi",
+  "base": "btc"
+}, {"icon": "bcx", "base": "btc"}]
+var ethCoinArray = [{"icon": "eos", "base": "eth"}, {"icon": "omg", "base": "eth"}, {
+  "icon": "mee",
+  "base": "eth"
+}, {"icon": "eko", "base": "eth"}, {"icon": "link", "base": "eth"}, {"icon": "iost", "base": "eth"}, {
+  "icon": "elf",
+  "base": "eth"
+}, {"icon": "dta", "base": "eth"}, {"icon": "adx", "base": "eth"}, {"icon": "evx", "base": "eth"}, {
+  "icon": "utk",
+  "base": "eth"
+}, {"icon": "let", "base": "eth"}, {"icon": "theta", "base": "eth"}, {"icon": "appc", "base": "eth"}, {
+  "icon": "yee",
+  "base": "eth"
+}, {"icon": "chat", "base": "eth"}, {"icon": "dat", "base": "eth"}, {"icon": "dbc", "base": "eth"}, {
+  "icon": "ost",
+  "base": "eth"
+}, {"icon": "qun", "base": "eth"}, {"icon": "aidoc", "base": "eth"}, {"icon": "topc", "base": "eth"}, {
+  "icon": "act",
+  "base": "eth"
+}, {"icon": "swftc", "base": "eth"}, {"icon": "powr", "base": "eth"}, {"icon": "req", "base": "eth"}, {
+  "icon": "qtum",
+  "base": "eth"
+}, {"icon": "wicc", "base": "eth"}, {"icon": "propy", "base": "eth"}, {"icon": "gnx", "base": "eth"}, {
+  "icon": "mds",
+  "base": "eth"
+}, {"icon": "hsr", "base": "eth"}, {"icon": "smt", "base": "eth"}, {"icon": "ven", "base": "eth"}, {
+  "icon": "wax",
+  "base": "eth"
+}, {"icon": "itc", "base": "eth"}, {"icon": "icx", "base": "eth"}, {"icon": "cvc", "base": "eth"}, {
+  "icon": "rcn",
+  "base": "eth"
+}, {"icon": "nas", "base": "eth"}, {"icon": "salt", "base": "eth"}, {"icon": "cmt", "base": "eth"}, {
+  "icon": "gas",
+  "base": "eth"
+}, {"icon": "bat", "base": "eth"}, {"icon": "rdn", "base": "eth"}, {"icon": "qsp", "base": "eth"}, {
+  "icon": "btm",
+  "base": "eth"
+}, {"icon": "mco", "base": "eth"}, {"icon": "tnt", "base": "eth"}, {"icon": "tnb", "base": "eth"}, {
+  "icon": "mana",
+  "base": "eth"
+}, {"icon": "pay", "base": "eth"}, {"icon": "qash", "base": "eth"}, {"icon": "gnt", "base": "eth"}, {
+  "icon": "dgd",
+  "base": "eth"
+}]
 
 //  var ethCoinArray = ["mee", "eos", "omg", "eko", "link", "iost", "elf", "dta", "adx", "evx", "utk", "let", "theta", "appc", "yee", "chat", "dat", "dbc", "ost", "qun", "aidoc", "topc", "act", "swftc", "powr", "req", "qtum", "wicc", "propy", "gnx", "mds", "hsr", "smt", "ven", "wax", "itc", "icx", "cvc", "rcn", "nas", "salt", "cmt", "gas", "bat", "rdn", "qsp", "btm", "mco", "tnt", "tnb", "mana", "pay", "qash", "gnt", "dgd"];
 //  var btcCoinArray = ["bch", "xrp", "eth", "ltc", "dash", "eos", "etc", "omg", "zec", "eko", "link", "qtum", "elf", "ven", "adx", "evx", "utk", "dta", "let", "theta", "xem", "appc", "iost", "yee", "chat", "dat", "ost", "qun", "aidoc", "topc", "act", "dbc", "rpx", "swftc", "powr", "req", "hsr", "smt", "wax", "itc", "icx", "cvc", "rcn", "snt", "nas", "salt", "cmt", "gas", "knc", "storj", "neo", "bat", "qsp", "rdn", "btm", "mco", "tnt", "tnb", "mana", "pay", "zrx", "mtl", "qash", "gnt", "ast", "dgd", "wicc", "gnx", "mds", "propy", "sbtc", "btg", "bcd", "bifi", "bcx"];
@@ -94,7 +208,11 @@ var util = {
   },
   ajax: {
     get: function (urlStr, success) {
-      urlStr += '?time=' + Date.now();
+      if (urlStr.indexOf('?') == -1) {
+        urlStr += '?time=' + Date.now();
+      } else {
+        urlStr += '&time=' + Date.now();
+      }
       var xhr = new XMLHttpRequest();
       xhr.open("GET", urlStr, true);
       xhr.onreadystatechange = function () {
