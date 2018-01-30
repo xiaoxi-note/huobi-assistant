@@ -460,6 +460,9 @@ var util = {
         case 'eth':
           highPrice = data.tick.high * util.price.eth_cny;
           lowPrice = data.tick.low * util.price.eth_cny;
+        case 'usdt':
+          highPrice = data.tick.high * util.price.cny;
+          lowPrice = data.tick.low * util.price.cny;
           break;
       }
       highPrice = highPrice.toFixed(2)
