@@ -11,8 +11,8 @@
     padding: 0
 }
 
-#chromePluginHuoBiAssistant body {
-    font: 12px "PingFangSC-Regular, sans-serif", "Arial Narrow", HELVETICA;
+#chromePluginHuoBiAssistant {
+    font: 15px "PingFangSC-Regular, sans-serif", "Arial Narrow", HELVETICA;
     background: #fff;
     -webkit-text-size-adjust: 100%;
 }

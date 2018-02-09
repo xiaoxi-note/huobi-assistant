@@ -19,6 +19,8 @@ var baseRegionHtmlStr = `
                             <div id="priceDetail">
                               <div>🐷 btc:$<span id="usdBtcPrice"></span>
                                       ¥<span id="cnyBtcPrice"></span>
+                                  🚀 bch:$<span id="usdBchPrice"></span>
+                                      ¥<span id="cnyBchPrice"></span>
                                    🐒 eth:$<span id="usdEthPrice"></span>
                                       ¥<span id="cnyEthPrice"></span>
                               </div>
@@ -127,7 +129,10 @@ var btcCoinArray = [{"icon": "bch", "base": "btc"}, {"icon": "xrp", "base": "btc
   "icon": "bifi",
   "base": "btc"
 }, {"icon": "bcx", "base": "btc"}]
-var ethCoinArray = [{"icon": "eos", "base": "eth"}, {"icon": "omg", "base": "eth"}, {
+var ethCoinArray = [{"icon": "ht", "base": "eth"}, {"icon": "lun", "base": "eth"}, {
+  "icon": "eos",
+  "base": "eth"
+}, {"icon": "omg", "base": "eth"}, {
   "icon": "mee",
   "base": "eth"
 }, {"icon": "eko", "base": "eth"}, {"icon": "link", "base": "eth"}, {"icon": "iost", "base": "eth"}, {
@@ -286,6 +291,16 @@ var util = {
       }
       util.params['eth_usdt'] = {name: 'eth', base: 'usdt'}
       util.ws.send(str)
+      var str = JSON.stringify({
+        "sub": `market.bchusdt.kline.1min`,
+        "id": 'btc_usdt'
+      })
+      util.dicObj[`market.bchusdt.kline.1min`] = {
+        coin: 'bch_usdt',
+        type: 'usdt'
+      }
+      util.params['bch_usdt'] = {name: 'bch', base: 'usdt'}
+      util.ws.send(str)
     }
     this.ws.onopen = function (d, a) {
       util.isOpen = true;
@@ -439,7 +454,7 @@ var util = {
       }, !1)
     },
     result (data){
-      var mainCoinData = ['btc_usdt', 'eth_usdt']
+      var mainCoinData = ['btc_usdt', 'eth_usdt', 'bch_usdt']
       var unitData = util.dicObj[data.ch]
       var baseData = util.params[unitData.coin]
       if (!baseData) return;
@@ -460,6 +475,7 @@ var util = {
         case 'eth':
           highPrice = data.tick.high * util.price.eth_cny;
           lowPrice = data.tick.low * util.price.eth_cny;
+          break;
         case 'usdt':
           highPrice = data.tick.high * util.price.cny;
           lowPrice = data.tick.low * util.price.cny;
@@ -500,6 +516,8 @@ var util = {
       var cnyBtcPrice = document.querySelector('#cnyBtcPrice')
       var usdEthPrice = document.querySelector('#usdEthPrice')
       var cnyEthPrice = document.querySelector('#cnyEthPrice')
+      var usdBchPrice = document.querySelector('#usdBchPrice')
+      var cnyBchPrice = document.querySelector('#cnyBchPrice')
       if (util.price.btc_usdt) {
 
         usdBtcPrice.innerHTML = util.price.btc_usdt.toFixed(2) || '';
@@ -513,6 +531,13 @@ var util = {
         if (util.price.cny) {
           cnyEthPrice.innerHTML = (util.price.eth_usdt * util.price.cny).toFixed(2);
           util.price.eth_cny = util.price.eth_usdt * util.price.cny;
+        }
+      }
+      if (util.price.bch_usdt) {
+        usdBchPrice.innerHTML = util.price.bch_usdt.toFixed(2) || '';
+        if (util.price.cny) {
+          cnyBchPrice.innerHTML = (util.price.bch_usdt * util.price.cny).toFixed(2);
+          util.price.bch_cny = util.price.bch_usdt * util.price.cny;
         }
       }
     },
