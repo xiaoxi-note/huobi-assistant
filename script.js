@@ -580,7 +580,7 @@ var util = {
   getUSDTPrice(cb){
     var cnyPrice = 'cnyPrice'
     var cnyPriceDate = 'cnyPriceDate'
-    util.ajax.get('https://api.k780.com/?app=finance.rate_cnyquot&curno=USD&&appkey=31464&sign=d1279e692156054ac00d7743664a176f&format=json', function (data) {
+    util.ajax.get('https://sapi.k780.com/?app=finance.rate_cnyquot&curno=USD&&appkey=31464&sign=d1279e692156054ac00d7743664a176f&format=json', function (data) {
       try {
         data = JSON.parse(data)
         util.price.cny = data.result.USD.ABC.cn_buy / 100
