@@ -221,7 +221,7 @@
 }
 
 #chromePluginHuoBiAssistant .none {
-    opacity: 0;
+    display: none;
 }
 
 #chromePluginHuoBiAssistant #setSearchData {
