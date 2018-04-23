@@ -221,7 +221,7 @@
 }
 
 #chromePluginHuoBiAssistant .none {
-    display: none;
+    opacity: 0;
 }
 
 #chromePluginHuoBiAssistant #setSearchData {
@@ -230,6 +230,22 @@
 
 #chromePluginHuoBiAssistant #resultData td:nth-child(3), #chromePluginHuoBiAssistant #resultData td:nth-child(5) {
     color: red
+}
+
+#chromePluginHuoBiAssistant .hidden {
+    transform: translateX(100%);
+}
+
+#chromePluginHuoBiAssistant .hidden-none {
+    display: none;
+}
+
+
+#chromePluginHuoBiAssistant .control {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    text-shadow: 1px 1px 1px #696767;
 }
 
 @keyframes down {

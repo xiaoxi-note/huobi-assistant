@@ -1,7 +1,7 @@
 {
   "name": "huobi-assistant",
   "manifest_version": 2,
-  "version": "1.1",
+  "version": "1.2",
   "description": "同步数据",
   "browser_action": {
     "default_icon": "favicon.ico"
